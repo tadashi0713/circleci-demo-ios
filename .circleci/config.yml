@@ -6,7 +6,7 @@ orbs:
 jobs:
   test:
     macos:
-      xcode: 13.0
+      xcode: 13.1.0
     steps:
       - checkout
       - ruby/install-deps
