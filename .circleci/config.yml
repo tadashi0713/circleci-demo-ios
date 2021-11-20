@@ -1,0 +1,18 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.2.0
+
+jobs:
+  test:
+    macos:
+      xcode: 13.1
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run: bundle exec fastlane custom_lane
+
+workflows:
+  test:
+    jobs:
+      - test
