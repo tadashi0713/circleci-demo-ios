@@ -1,5 +1,5 @@
 # ruby/fastlane
 vendor/
 fastlane/test_output/
-# fastlane/report.xml
-# fastlane/README.md
+fastlane/report.xml
+fastlane/README.md
