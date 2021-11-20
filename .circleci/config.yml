@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run: bundle exec fastlane custom_lane
+      - run: bundle exec fastlane unit_test
 
 workflows:
   test:
