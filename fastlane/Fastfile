@@ -22,6 +22,10 @@ platform :ios do
 
   desc "Run UnitTests"
   lane :unit_test do
-    run_tests(scheme: "CircleCIDemoTests")
+    run_tests(
+      scheme: "CircleCIDemo",
+      devices: ["iPhone 13 (15.0)"],
+      derived_data_path: "./dist"
+    )
   end
 end
