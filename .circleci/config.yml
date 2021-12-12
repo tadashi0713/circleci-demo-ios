@@ -26,6 +26,5 @@ jobs:
 workflows:
   test:
     jobs:
-      - test_gen2_medium
       - test_large
       - test_metal
