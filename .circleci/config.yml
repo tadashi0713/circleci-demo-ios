@@ -4,18 +4,9 @@ orbs:
   ruby: circleci/ruby@1.2.0
 
 jobs:
-  test_gen2_medium:
-    macos:
-      xcode: 13.0.0
-    resource_class: macos.x86.medium.gen2
-    steps:
-      - checkout
-      - ruby/install-deps
-      - run: bundle exec fastlane unit_test
-
   test_large:
     macos:
-      xcode: 13.1.0
+      xcode: 13.0.0
     resource_class: large
     steps:
       - checkout
@@ -28,7 +19,8 @@ jobs:
     resource_class: metal
     steps:
       - checkout
-      - ruby/install-deps
+      - ruby/install-deps:
+          key: metal
       - run: bundle exec fastlane unit_test
 
 workflows:
