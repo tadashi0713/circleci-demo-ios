@@ -48,4 +48,6 @@ workflows:
     jobs:
       - unit_test
       - ui_test
-      - beta
+      - beta:
+          context: # Context
+            - mobile
