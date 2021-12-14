@@ -39,8 +39,11 @@ platform :ios do
   end
 
   lane :beta do
+    match(type: "adhoc")
     build_app(
       scheme: "CircleCIDemo",
+      configuration: "Debug",
+      export_method: "ad-hoc",
       derived_data_path: "./dist"
     )
   end
