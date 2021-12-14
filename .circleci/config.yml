@@ -44,7 +44,7 @@ jobs:
       - run: bundle exec fastlane beta
 
 workflows:
-  test:
+  main:
     jobs:
       - unit_test
       - ui_test
