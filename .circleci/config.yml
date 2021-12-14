@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@1.2.0
+  macos: circleci/macos@2.0.1
 
 jobs:
   unit_test:
@@ -18,7 +19,23 @@ jobs:
       - store_test_results:
           path: fastlane/test_output/report.junit
 
+  ui_test:
+    macos:
+      xcode: 13.1.0
+    resource_class: large
+    steps:
+      - checkout
+      # Preboot iOS Simulator
+      - macos/preboot-simulator:
+          device: iPhone 13
+          version: "15.0"
+      - ruby/install-deps
+      - run: bundle exec fastlane ui_test
+      - store_test_results:
+          path: fastlane/test_output/report.junit
+
 workflows:
   test:
     jobs:
       - unit_test
+      - ui_test
