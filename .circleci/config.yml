@@ -16,7 +16,7 @@ jobs:
       - run: bundle exec fastlane unit_test
       # Store Test Results
       - store_test_results:
-          path: fastlane/test_report/report.junit
+          path: fastlane/test_output/report.junit
 
 workflows:
   test:
