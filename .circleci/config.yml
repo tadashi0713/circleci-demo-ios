@@ -4,27 +4,21 @@ orbs:
   ruby: circleci/ruby@1.2.0
 
 jobs:
-  test_large:
+  unit_test:
     macos:
-      xcode: 13.0.0
+      xcode: 13.1.0
+    # Resource class
     resource_class: large
     steps:
       - checkout
+      # Ruby Orb(Install fastlane)
       - ruby/install-deps
       - run: bundle exec fastlane unit_test
-
-  test_metal:
-    macos:
-      xcode: 13.0.0
-    resource_class: metal
-    steps:
-      - checkout
-      - ruby/install-deps:
-          key: metal
-      - run: bundle exec fastlane unit_test
+      # Store Test Results
+      - store_test_results:
+          path: fastlane/test_report/report.junit
 
 workflows:
   test:
     jobs:
-      - test_large
-      - test_metal
+      - unit_test
