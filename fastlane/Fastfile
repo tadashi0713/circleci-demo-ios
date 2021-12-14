@@ -46,5 +46,8 @@ platform :ios do
       export_method: "ad-hoc",
       derived_data_path: "./dist"
     )
+    firebase_app_distribution(
+      app: "1:137851785924:ios:2c201eae2f71ed0af2ef91"
+    )
   end
 end
