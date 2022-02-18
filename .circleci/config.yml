@@ -5,39 +5,9 @@ orbs:
   macos: circleci/macos@2.1.0
 
 jobs:
-  unit_test:
-    macos:
-      xcode: 13.1.0
-    # Resource class
-    resource_class: large
-    steps:
-      - checkout
-      # Ruby Orb(Install fastlane)
-      - ruby/install-deps
-      - run: bundle exec fastlane unit_test
-      # Store Test Results
-      - store_test_results:
-          path: fastlane/test_output/report.junit
-
-  ui_test:
-    macos:
-      xcode: 13.1.0
-    resource_class: large
-    steps:
-      - checkout
-      # Preboot iOS Simulator
-      - macos/preboot-simulator:
-          device: iPhone 13
-          version: "15.0"
-      - ruby/install-deps
-      - run: bundle exec fastlane ui_test
-      - store_test_results:
-          path: fastlane/test_output/report.junit
-
   beta:
-    macos:
-      xcode: 13.1.0
-    resource_class: large
+    machine: true
+    resource_class: tadashi0713/ec2-mac
     steps:
       - checkout
       - ruby/install-deps
@@ -46,8 +16,6 @@ jobs:
 workflows:
   main:
     jobs:
-      - unit_test
-      - ui_test
       - beta:
           context: # Context
             - mobile
