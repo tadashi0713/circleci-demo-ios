@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run: | 
-          rbenv init
+          rbenv rehash
           ruby --version
       - ruby/install-deps:
           key: ec2-mac-runner
