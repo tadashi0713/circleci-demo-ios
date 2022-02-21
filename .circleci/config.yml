@@ -12,8 +12,9 @@ jobs:
       - run: | 
           source ~/.zshrc
           ruby --version
-      - ruby/install-deps:
-          key: ec2-mac-runner
+          bundle install
+      # - ruby/install-deps:
+      #     key: ec2-mac-runner
       - run: bundle exec fastlane beta
 
 workflows:
