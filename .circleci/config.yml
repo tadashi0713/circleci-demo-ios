@@ -10,9 +10,8 @@ jobs:
     steps:
       - run: echo 'eval "$(rbenv init - bash)"' >> $BASH_ENV
       - checkout
-      - ruby/install-deps:
-          key: ec2-mac-runner
-      - run: bundle exec fastlane beta
+      - run: ruby --version
+      # - run: bundle exec fastlane beta
 
 workflows:
   main:
