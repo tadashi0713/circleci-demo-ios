@@ -10,8 +10,8 @@ jobs:
     steps:
       - checkout
       - run: | 
-        ruby -v
-        bundle install
+          ruby -v
+          bundle install
       # - run: bundle exec fastlane beta
 
 workflows:
