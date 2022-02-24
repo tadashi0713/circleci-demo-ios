@@ -9,8 +9,10 @@ jobs:
     resource_class: tadashi0713/ec2-mac
     steps:
       - checkout
-      - run: bundle install
-      - run: bundle exec fastlane beta
+      - run: | 
+        ruby -v
+        bundle install
+      # - run: bundle exec fastlane beta
 
 workflows:
   main:
