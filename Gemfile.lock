@@ -206,6 +206,7 @@ GEM
       xcpretty (~> 0.2, >= 0.0.7)
 
 PLATFORMS
+  ruby
   universal-darwin-20
 
 DEPENDENCIES
