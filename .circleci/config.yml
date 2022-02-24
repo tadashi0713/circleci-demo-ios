@@ -9,9 +9,8 @@ jobs:
     resource_class: tadashi0713/ec2-mac
     steps:
       - checkout
-      - run: | 
-          ruby -v
-          bundle install
+      - ruby/install-deps:
+          key: ec2-mac-runner
       # - run: bundle exec fastlane beta
 
 workflows:
