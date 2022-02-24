@@ -11,7 +11,7 @@ jobs:
       - checkout
       - ruby/install-deps:
           key: ec2-mac-runner
-      - run: bundle exec fastlane beta
+      - run: bundle exec fastlane unit_test
 
 workflows:
   main:
