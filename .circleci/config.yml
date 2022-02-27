@@ -5,7 +5,7 @@ orbs:
   macos: circleci/macos@2.1.0
 
 jobs:
-  unit_test_medium:
+  test_medium:
     macos:
       xcode: 13.2.1
     # Resource class
@@ -16,7 +16,7 @@ jobs:
       - ruby/install-deps
       - run: bundle exec fastlane unit_test
 
-  unit_test_large:
+  test_large:
     macos:
       xcode: 13.2.1
     # Resource class
@@ -27,7 +27,7 @@ jobs:
       - ruby/install-deps
       - run: bundle exec fastlane unit_test
 
-  unit_test_ec2_mac_runner:
+  test_ec2_mac_runner:
     machine: true
     resource_class: tadashi0713/ec2-mac
     steps:
@@ -63,6 +63,6 @@ jobs:
 workflows:
   main:
     jobs:
-      - unit_test_medium
-      - unit_test_large
-      - unit_test_ec2_mac_runner
+      - test_medium
+      - test_large
+      - test_ec2_mac_runner
