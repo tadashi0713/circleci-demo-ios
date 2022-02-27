@@ -65,5 +65,4 @@ workflows:
     jobs:
       - unit_test_medium
       - unit_test_large
-      - unit_test_dedicated_host
       - unit_test_ec2_mac_runner
