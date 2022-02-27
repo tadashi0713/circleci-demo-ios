@@ -15,9 +15,6 @@ jobs:
       # Ruby Orb(Install fastlane)
       - ruby/install-deps
       - run: bundle exec fastlane unit_test
-      # Store Test Results
-      - store_test_results:
-          path: fastlane/test_output/report.junit
 
   unit_test_large:
     macos:
@@ -29,9 +26,17 @@ jobs:
       # Ruby Orb(Install fastlane)
       - ruby/install-deps
       - run: bundle exec fastlane unit_test
-      # Store Test Results
-      - store_test_results:
-          path: fastlane/test_output/report.junit
+
+  unit_test_dedicated_host:
+    macos:
+      xcode: 13.2.1
+    # Resource class
+    resource_class: macos.x86.metal.gen1
+    steps:
+      - checkout
+      # Ruby Orb(Install fastlane)
+      - ruby/install-deps
+      - run: bundle exec fastlane unit_test
 
   unit_test_ec2_mac_runner:
     machine: true
@@ -71,4 +76,5 @@ workflows:
     jobs:
       - unit_test_medium
       - unit_test_large
+      - unit_test_dedicated_host
       - unit_test_ec2_mac_runner
