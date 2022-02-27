@@ -27,17 +27,6 @@ jobs:
       - ruby/install-deps
       - run: bundle exec fastlane unit_test
 
-  unit_test_dedicated_host:
-    macos:
-      xcode: 13.2.1
-    # Resource class
-    resource_class: macos.x86.metal.gen1
-    steps:
-      - checkout
-      # Ruby Orb(Install fastlane)
-      - ruby/install-deps
-      - run: bundle exec fastlane unit_test
-
   unit_test_ec2_mac_runner:
     machine: true
     resource_class: tadashi0713/ec2-mac

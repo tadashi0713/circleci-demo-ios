@@ -207,10 +207,11 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-darwin-21
 
 DEPENDENCIES
   fastlane
   fastlane-plugin-firebase_app_distribution
 
 BUNDLED WITH
-   2.2.15
+   2.3.8
