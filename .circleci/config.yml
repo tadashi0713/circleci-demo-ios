@@ -28,7 +28,7 @@ jobs:
       # Preboot iOS Simulator
       - macos/preboot-simulator:
           device: iPhone 13
-          version: "15.3"
+          version: "15.4"
       - ruby/install-deps
       - run: bundle exec fastlane ui_test
       - store_test_results:
