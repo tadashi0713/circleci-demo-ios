@@ -7,7 +7,7 @@ orbs:
 jobs:
   unit_test:
     macos:
-      xcode: 13.1.0
+      xcode: 13.3.0
     # Resource class
     resource_class: large
     steps:
@@ -21,7 +21,7 @@ jobs:
 
   ui_test:
     macos:
-      xcode: 13.1.0
+      xcode: 13.3.0
     resource_class: large
     steps:
       - checkout
@@ -36,7 +36,7 @@ jobs:
 
   beta:
     macos:
-      xcode: 13.1.0
+      xcode: 13.3.0
     resource_class: large
     steps:
       - checkout
