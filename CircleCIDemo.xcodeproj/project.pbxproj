@@ -13,7 +13,6 @@
 		E9A9134127492F0F000CCA8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A9134027492F0F000CCA8F /* Preview Assets.xcassets */; };
 		E9A9134B27492F0F000CCA8F /* CircleCIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9134A27492F0F000CCA8F /* CircleCIDemoTests.swift */; };
 		E9A9135527492F0F000CCA8F /* CircleCIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9135427492F0F000CCA8F /* CircleCIDemoUITests.swift */; };
-		E9A9135727492F0F000CCA8F /* CircleCIDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9135627492F0F000CCA8F /* CircleCIDemoUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 		E9A9134A27492F0F000CCA8F /* CircleCIDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoTests.swift; sourceTree = "<group>"; };
 		E9A9135027492F0F000CCA8F /* CircleCIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleCIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A9135427492F0F000CCA8F /* CircleCIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests.swift; sourceTree = "<group>"; };
-		E9A9135627492F0F000CCA8F /* CircleCIDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				E9A9135427492F0F000CCA8F /* CircleCIDemoUITests.swift */,
-				E9A9135627492F0F000CCA8F /* CircleCIDemoUITestsLaunchTests.swift */,
 			);
 			path = CircleCIDemoUITests;
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A9135527492F0F000CCA8F /* CircleCIDemoUITests.swift in Sources */,
-				E9A9135727492F0F000CCA8F /* CircleCIDemoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

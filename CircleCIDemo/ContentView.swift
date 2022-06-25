@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text = "Hello, world!"
+    
     var body: some View {
-        Text("Hello, world!")
+        Text(text)
             .padding()
+            .accessibility(identifier: "text")
+        Button(action: {
+            text = "Button Tapped!"
+        }){
+            Text("Tap this button")
+                .accessibility(identifier: "button")
+        }
     }
 }
 
