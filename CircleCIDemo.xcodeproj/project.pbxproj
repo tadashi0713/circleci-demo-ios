@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9A0A4E3286772AC007885DB /* CircleCIDemoUITests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E2286772AC007885DB /* CircleCIDemoUITests2.swift */; };
+		E9A0A4E528677339007885DB /* CircleCIDemoUITests3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E428677339007885DB /* CircleCIDemoUITests3.swift */; };
+		E9A0A4E72867736C007885DB /* CircleCIDemoUITests4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E62867736C007885DB /* CircleCIDemoUITests4.swift */; };
+		E9A0A4E928677391007885DB /* CircleCIDemoUITests5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E828677391007885DB /* CircleCIDemoUITests5.swift */; };
 		E9A9133A27492F0C000CCA8F /* CircleCIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9133927492F0C000CCA8F /* CircleCIDemoApp.swift */; };
 		E9A9133C27492F0C000CCA8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9133B27492F0C000CCA8F /* ContentView.swift */; };
 		E9A9133E27492F0F000CCA8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A9133D27492F0F000CCA8F /* Assets.xcassets */; };
 		E9A9134127492F0F000CCA8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A9134027492F0F000CCA8F /* Preview Assets.xcassets */; };
 		E9A9134B27492F0F000CCA8F /* CircleCIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9134A27492F0F000CCA8F /* CircleCIDemoTests.swift */; };
-		E9A9135527492F0F000CCA8F /* CircleCIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9135427492F0F000CCA8F /* CircleCIDemoUITests.swift */; };
+		E9A9135527492F0F000CCA8F /* CircleCIDemoUITests1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A9135427492F0F000CCA8F /* CircleCIDemoUITests1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9A0A4E2286772AC007885DB /* CircleCIDemoUITests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests2.swift; sourceTree = "<group>"; };
+		E9A0A4E428677339007885DB /* CircleCIDemoUITests3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests3.swift; sourceTree = "<group>"; };
+		E9A0A4E62867736C007885DB /* CircleCIDemoUITests4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests4.swift; sourceTree = "<group>"; };
+		E9A0A4E828677391007885DB /* CircleCIDemoUITests5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests5.swift; sourceTree = "<group>"; };
 		E9A9133627492F0C000CCA8F /* CircleCIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleCIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A9133927492F0C000CCA8F /* CircleCIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoApp.swift; sourceTree = "<group>"; };
 		E9A9133B27492F0C000CCA8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,7 +49,7 @@
 		E9A9134627492F0F000CCA8F /* CircleCIDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleCIDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A9134A27492F0F000CCA8F /* CircleCIDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoTests.swift; sourceTree = "<group>"; };
 		E9A9135027492F0F000CCA8F /* CircleCIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleCIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9A9135427492F0F000CCA8F /* CircleCIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests.swift; sourceTree = "<group>"; };
+		E9A9135427492F0F000CCA8F /* CircleCIDemoUITests1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +127,11 @@
 		E9A9135327492F0F000CCA8F /* CircleCIDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E9A9135427492F0F000CCA8F /* CircleCIDemoUITests.swift */,
+				E9A0A4E828677391007885DB /* CircleCIDemoUITests5.swift */,
+				E9A0A4E62867736C007885DB /* CircleCIDemoUITests4.swift */,
+				E9A0A4E428677339007885DB /* CircleCIDemoUITests3.swift */,
+				E9A9135427492F0F000CCA8F /* CircleCIDemoUITests1.swift */,
+				E9A0A4E2286772AC007885DB /* CircleCIDemoUITests2.swift */,
 			);
 			path = CircleCIDemoUITests;
 			sourceTree = "<group>";
@@ -271,7 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A9135527492F0F000CCA8F /* CircleCIDemoUITests.swift in Sources */,
+				E9A9135527492F0F000CCA8F /* CircleCIDemoUITests1.swift in Sources */,
+				E9A0A4E928677391007885DB /* CircleCIDemoUITests5.swift in Sources */,
+				E9A0A4E72867736C007885DB /* CircleCIDemoUITests4.swift in Sources */,
+				E9A0A4E528677339007885DB /* CircleCIDemoUITests3.swift in Sources */,
+				E9A0A4E3286772AC007885DB /* CircleCIDemoUITests2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
