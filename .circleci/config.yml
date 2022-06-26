@@ -43,7 +43,7 @@ jobs:
       - ruby/install-deps
       - run: bundle exec fastlane build_for_uitest
       - persist_to_workspace:
-          root: /Users/distiller
+          root: .
           paths:
             - dist
 
@@ -57,7 +57,7 @@ jobs:
           device: iPhone 13
           version: "15.4"
       - attach_workspace:
-          at: /Users/distiller
+          at: dist
       - ruby/install-deps
       - run: bundle exec fastlane build_for_uitest
 
