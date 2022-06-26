@@ -63,7 +63,7 @@ jobs:
       - run: |
           CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
             | sed 's@/@.@g' \
-            | sed sed 's/.swift//' \
+            | sed 's/.swift//' \
             | circleci tests split --split-by=timings --timings-type=classname)
           echo $CLASSNAMES
           bundle exec fastlane ui_test_without_building
