@@ -34,16 +34,30 @@ jobs:
       - store_test_results:
           path: fastlane/test_output/report.junit
 
+  build_for_ui_test:
+    macos:
+      xcode: 13.3.1
+    resource_class: macos.x86.medium.gen2
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run: bundle exec fastlane build_for_uitest
+      - persist_to_workspace:
+          root: /Users/distiller
+          paths:
+            - dist
+
   ui_test_parallel:
     macos:
       xcode: 13.3.1
     resource_class: macos.x86.medium.gen2
     steps:
       - checkout
-      # Preboot iOS Simulator
       - macos/preboot-simulator:
           device: iPhone 13
           version: "15.4"
+      - attach_workspace:
+          at: /Users/distiller
       - ruby/install-deps
       - run: bundle exec fastlane build_for_uitest
 
@@ -61,7 +75,10 @@ workflows:
     jobs:
       - unit_test
       - ui_test
-      - ui_test_parallel
+      - build_for_ui_test
+      - ui_test_parallel:
+          requires:
+            - build_for_ui_test
       - beta:
           context: # Context
             - mobile
