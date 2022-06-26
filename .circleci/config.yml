@@ -30,6 +30,21 @@ jobs:
           device: iPhone 13
           version: "15.4"
       - ruby/install-deps
+      - run: bundle exec fastlane ui_test_all
+      - store_test_results:
+          path: fastlane/test_output/report.junit
+
+  ui_test_parallel:
+    macos:
+      xcode: 13.3.1
+    resource_class: macos.x86.medium.gen2
+    steps:
+      - checkout
+      # Preboot iOS Simulator
+      - macos/preboot-simulator:
+          device: iPhone 13
+          version: "15.4"
+      - ruby/install-deps
       - run: bundle exec fastlane ui_test
       - store_test_results:
           path: fastlane/test_output/report.junit
@@ -48,6 +63,7 @@ workflows:
     jobs:
       - unit_test
       - ui_test
+      - ui_test_parallel
       - beta:
           context: # Context
             - mobile

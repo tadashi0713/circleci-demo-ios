@@ -28,11 +28,20 @@ platform :ios do
     )
   end
 
-  desc "Run UITests"
-  lane :ui_test do
+  desc "Run all UITests"
+  lane :ui_test_all do
     run_tests(
       scheme: "CircleCIDemoUITests",
       devices: ["iPhone 13 (15.4)"]
+    )
+  end
+
+  desc "Run specific UITests"
+  lane :ui_test do
+    run_tests(
+      scheme: "CircleCIDemoUITests",
+      devices: ["iPhone 13 (15.4)"],
+      only_testing: "CircleCIDemoUITests/CircleCIDemoUITests5"
     )
   end
 
