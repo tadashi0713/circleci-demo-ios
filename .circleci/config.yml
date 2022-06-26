@@ -57,7 +57,7 @@ jobs:
           device: iPhone 13
           version: "15.4"
       - attach_workspace:
-          at: dist
+          at: .
       - ruby/install-deps
       - run: bundle exec fastlane ui_test_without_building
 
