@@ -59,7 +59,7 @@ jobs:
       - attach_workspace:
           at: dist
       - ruby/install-deps
-      - run: bundle exec fastlane build_for_uitest
+      - run: bundle exec fastlane ui_test_without_building
 
   beta:
     macos:
