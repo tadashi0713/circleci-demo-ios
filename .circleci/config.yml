@@ -45,9 +45,7 @@ jobs:
           device: iPhone 13
           version: "15.4"
       - ruby/install-deps
-      - run: bundle exec fastlane ui_test
-      - store_test_results:
-          path: fastlane/test_output/report.junit
+      - run: bundle exec fastlane build_for_uitest
 
   beta:
     macos:
