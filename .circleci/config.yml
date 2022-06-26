@@ -48,7 +48,7 @@ jobs:
             - dist
 
   ui_test_parallel:
-    parallelism: 5
+    parallelism: 2
     macos:
       xcode: 13.3.1
     resource_class: macos.x86.medium.gen2
@@ -67,11 +67,15 @@ jobs:
       #       | circleci tests split --split-by=timings --timings-type=classname)
       #     echo $CLASSNAMES
       #     bundle exec fastlane ui_test_without_building
-      - run: |
-          CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
+      - run:
+          name: Split test classes
+          working_directory: CircleCIDemoUITests
+          command: |
+          CLASSNAMES=$(circleci tests glob "**/*.swift" \
             | sed 's/.swift//' \
             | circleci tests split --split-by=timings --timings-type=classname)
           echo $CLASSNAMES
+      - run: |
           bundle exec fastlane ui_test_without_building target_tests:$CLASSNAMES
       - store_test_results:
           path: fastlane/test_output/report.junit
