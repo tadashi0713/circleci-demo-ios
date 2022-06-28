@@ -60,13 +60,6 @@ jobs:
       - attach_workspace:
           at: .
       - ruby/install-deps
-      # - run: |
-      #     CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
-      #       | sed 's@/@.@g' \
-      #       | sed 's/.swift//' \
-      #       | circleci tests split --split-by=timings --timings-type=classname)
-      #     echo $CLASSNAMES
-      #     bundle exec fastlane ui_test_without_building
       - run:
           name: Split tests and run UITests
           command: |
@@ -74,8 +67,9 @@ jobs:
               | sed 's@/@.@g' \
               | sed 's/.swift//' \
               | circleci tests split --split-by=timings --timings-type=classname)
+            FASTLANE_ARGS=$(echo $CLASSNAMES | sed 's/\./\//g')
             echo $CLASSNAMES
-            bundle exec fastlane ui_test_without_building target_tests:$CLASSNAMES
+            bundle exec fastlane ui_test_without_building target_tests:$FASTLANE_ARGS
       - store_test_results:
           path: fastlane/test_output/report.junit
 
