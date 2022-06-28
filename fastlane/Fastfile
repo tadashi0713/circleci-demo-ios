@@ -37,7 +37,7 @@ platform :ios do
   end
 
   desc "Run all UITests"
-  lane :build_for_uitest do
+  lane :build_for_ui_test do
     run_tests(
       scheme: "CircleCIDemoUITests",
       devices: ["iPhone 13 (15.4)"],
@@ -51,7 +51,7 @@ platform :ios do
     run_tests(
       scheme: "CircleCIDemoUITests",
       devices: ["iPhone 13 (15.4)"],
-      only_testing: options[:target_tests],
+      only_testing: options[:tests],
       derived_data_path: "dist",
       test_without_building: true
     )

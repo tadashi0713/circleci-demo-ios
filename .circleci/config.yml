@@ -41,7 +41,7 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run: bundle exec fastlane build_for_uitest
+      - run: bundle exec fastlane build_for_ui_test
       - persist_to_workspace:
           root: .
           paths:
@@ -67,9 +67,9 @@ jobs:
               | sed 's@/@.@g' \
               | sed 's/.swift//' \
               | circleci tests split --split-by=timings --timings-type=classname)
-            FASTLANE_ARGS=$(echo $CLASSNAMES | sed 's/\./\//g')
+            FASTLANE_ARGS=$(echo $CLASSNAMES | sed -e 's/\./\//g' -e 's/ /,/g')
             echo $FASTLANE_ARGS
-            bundle exec fastlane ui_test_without_building target_tests:$FASTLANE_ARGS
+            bundle exec fastlane ui_test_without_building tests:$FASTLANE_ARGS
       - store_test_results:
           path: fastlane/test_output/report.junit
 
