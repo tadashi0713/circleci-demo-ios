@@ -71,6 +71,7 @@ jobs:
           name: Split tests and run UITests
           command: |
             CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
+              | sed 's@/@.@g' \
               | sed 's/.swift//' \
               | circleci tests split --split-by=timings --timings-type=classname)
             echo $CLASSNAMES
