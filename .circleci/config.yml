@@ -69,9 +69,8 @@ jobs:
       #     bundle exec fastlane ui_test_without_building
       - run:
           name: Split test classes
-          working_directory: CircleCIDemoUITests
           command: |
-            CLASSNAMES=$(circleci tests glob "**/*.swift" \
+            CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
               | sed 's/.swift//' \
               | circleci tests split --split-by=timings --timings-type=classname)
             echo $CLASSNAMES
