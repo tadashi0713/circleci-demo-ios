@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ruby: circleci/ruby@1.7.1
+  ruby: circleci/ruby@1.8.0
   macos: circleci/macos@2.1.0
 
 jobs:
@@ -48,7 +48,7 @@ jobs:
             - dist
 
   ui_test_parallel:
-    parallelism: 2
+    parallelism: 3
     macos:
       xcode: 13.3.1
     resource_class: macos.x86.medium.gen2
