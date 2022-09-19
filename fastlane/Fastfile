@@ -24,7 +24,7 @@ platform :ios do
   lane :unit_test do
     run_tests(
       scheme: "CircleCIDemoTests",
-      devices: ["iPhone 13 (15.4)"]
+      devices: ["iPhone 13 (15.5)"]
     )
   end
 
@@ -32,7 +32,7 @@ platform :ios do
   lane :ui_test_all do
     run_tests(
       scheme: "CircleCIDemoUITests",
-      devices: ["iPhone 13 (15.4)"]
+      devices: ["iPhone 13 (15.5)"]
     )
   end
 
@@ -40,7 +40,7 @@ platform :ios do
   lane :build_for_ui_test do
     run_tests(
       scheme: "CircleCIDemoUITests",
-      devices: ["iPhone 13 (15.4)"],
+      devices: ["iPhone 13 (15.5)"],
       derived_data_path: "dist",
       build_for_testing: true
     )
@@ -50,7 +50,7 @@ platform :ios do
   lane :ui_test_without_building do |options|
     run_tests(
       scheme: "CircleCIDemoUITests",
-      devices: ["iPhone 13 (15.4)"],
+      devices: ["iPhone 13 (15.5)"],
       only_testing: options[:tests],
       derived_data_path: "dist",
       test_without_building: true
