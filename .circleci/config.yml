@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ruby: circleci/ruby@1.8.0
+  ruby: circleci/ruby@2.0.0
   macos: circleci/macos@2.3.1
 
 jobs:
