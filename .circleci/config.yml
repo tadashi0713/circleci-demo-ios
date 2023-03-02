@@ -7,9 +7,8 @@ orbs:
 jobs:
   unit_test:
     macos:
-      xcode: 13.4.1
-    # Resource class
-    resource_class: macos.x86.medium.gen2
+      xcode: 14.2.0
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       # Ruby Orb(Install fastlane)
@@ -21,8 +20,8 @@ jobs:
 
   ui_test:
     macos:
-      xcode: 13.4.1
-    resource_class: macos.x86.medium.gen2
+      xcode: 14.2.0
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       # Preboot iOS Simulator
@@ -36,8 +35,8 @@ jobs:
 
   build_for_ui_test:
     macos:
-      xcode: 13.4.1
-    resource_class: macos.x86.medium.gen2
+      xcode: 14.2.0
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       - ruby/install-deps
@@ -50,8 +49,8 @@ jobs:
   ui_test_parallel:
     parallelism: 2 
     macos:
-      xcode: 13.4.1
-    resource_class: macos.x86.medium.gen2
+      xcode: 14.2.0
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       - macos/preboot-simulator:
@@ -74,8 +73,8 @@ jobs:
 
   beta:
     macos:
-      xcode: 13.4.1
-    resource_class: macos.x86.medium.gen2
+      xcode: 14.2.0
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       - ruby/install-deps
