@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93635962A2128C500E3A7F6 /* CircleCIDemoUITests6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93635952A2128C500E3A7F6 /* CircleCIDemoUITests6.swift */; };
+		E93635982A21293300E3A7F6 /* CircleCIDemoUITests7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93635972A21293300E3A7F6 /* CircleCIDemoUITests7.swift */; };
+		E936359A2A2343D700E3A7F6 /* CircleCIDemoUITests8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93635992A2343D700E3A7F6 /* CircleCIDemoUITests8.swift */; };
+		E936359C2A23443800E3A7F6 /* CircleCIDemoUITests9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936359B2A23443800E3A7F6 /* CircleCIDemoUITests9.swift */; };
+		E936359E2A23446600E3A7F6 /* CircleCIDemoUITests10.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936359D2A23446600E3A7F6 /* CircleCIDemoUITests10.swift */; };
 		E9A0A4E3286772AC007885DB /* CircleCIDemoUITests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E2286772AC007885DB /* CircleCIDemoUITests2.swift */; };
 		E9A0A4E528677339007885DB /* CircleCIDemoUITests3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E428677339007885DB /* CircleCIDemoUITests3.swift */; };
 		E9A0A4E72867736C007885DB /* CircleCIDemoUITests4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0A4E62867736C007885DB /* CircleCIDemoUITests4.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E93635952A2128C500E3A7F6 /* CircleCIDemoUITests6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests6.swift; sourceTree = "<group>"; };
+		E93635972A21293300E3A7F6 /* CircleCIDemoUITests7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests7.swift; sourceTree = "<group>"; };
+		E93635992A2343D700E3A7F6 /* CircleCIDemoUITests8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests8.swift; sourceTree = "<group>"; };
+		E936359B2A23443800E3A7F6 /* CircleCIDemoUITests9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests9.swift; sourceTree = "<group>"; };
+		E936359D2A23446600E3A7F6 /* CircleCIDemoUITests10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests10.swift; sourceTree = "<group>"; };
 		E9A0A4E2286772AC007885DB /* CircleCIDemoUITests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests2.swift; sourceTree = "<group>"; };
 		E9A0A4E428677339007885DB /* CircleCIDemoUITests3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests3.swift; sourceTree = "<group>"; };
 		E9A0A4E62867736C007885DB /* CircleCIDemoUITests4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCIDemoUITests4.swift; sourceTree = "<group>"; };
@@ -132,6 +142,11 @@
 				E9A0A4E428677339007885DB /* CircleCIDemoUITests3.swift */,
 				E9A9135427492F0F000CCA8F /* CircleCIDemoUITests1.swift */,
 				E9A0A4E2286772AC007885DB /* CircleCIDemoUITests2.swift */,
+				E93635952A2128C500E3A7F6 /* CircleCIDemoUITests6.swift */,
+				E93635972A21293300E3A7F6 /* CircleCIDemoUITests7.swift */,
+				E93635992A2343D700E3A7F6 /* CircleCIDemoUITests8.swift */,
+				E936359B2A23443800E3A7F6 /* CircleCIDemoUITests9.swift */,
+				E936359D2A23446600E3A7F6 /* CircleCIDemoUITests10.swift */,
 			);
 			path = CircleCIDemoUITests;
 			sourceTree = "<group>";
@@ -284,8 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A9135527492F0F000CCA8F /* CircleCIDemoUITests1.swift in Sources */,
+				E936359A2A2343D700E3A7F6 /* CircleCIDemoUITests8.swift in Sources */,
+				E93635962A2128C500E3A7F6 /* CircleCIDemoUITests6.swift in Sources */,
+				E936359C2A23443800E3A7F6 /* CircleCIDemoUITests9.swift in Sources */,
+				E93635982A21293300E3A7F6 /* CircleCIDemoUITests7.swift in Sources */,
 				E9A0A4E928677391007885DB /* CircleCIDemoUITests5.swift in Sources */,
 				E9A0A4E72867736C007885DB /* CircleCIDemoUITests4.swift in Sources */,
+				E936359E2A23446600E3A7F6 /* CircleCIDemoUITests10.swift in Sources */,
 				E9A0A4E528677339007885DB /* CircleCIDemoUITests3.swift in Sources */,
 				E9A0A4E3286772AC007885DB /* CircleCIDemoUITests2.swift in Sources */,
 			);
