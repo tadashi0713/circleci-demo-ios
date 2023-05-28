@@ -67,7 +67,32 @@ jobs:
               | sed 's/.swift//' \
               | circleci tests split --split-by=timings --timings-type=classname)
             FASTLANE_ARGS=$(echo $CLASSNAMES | sed -e 's/\./\//g' -e 's/ /,/g')
+            --split-by=timings --timings-type=classname
             bundle exec fastlane ui_test_without_building tests:$FASTLANE_ARGS
+      - store_test_results:
+          path: fastlane/test_output/report.junit
+
+  ui_test_parallel_rerun_failed:
+    parallelism: 4
+    macos:
+      xcode: 14.2.0
+    resource_class: macos.m1.large.gen1
+    steps:
+      - checkout
+      - macos/preboot-simulator:
+          device: iPhone 13
+          version: "15.5"
+      - attach_workspace:
+          at: .
+      - ruby/install-deps
+      - run:
+          name: Split tests and run UITests
+          command: |
+            CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
+              | sed 's@/@.@g' \
+              | sed 's/.swift//')
+            FASTLANE_ARGS=$(echo $CLASSNAMES | sed -e 's/\./\//g' -e 's/ /,/g')
+            echo $FASTLANE_ARGS | circleci tests run --command="bundle exec fastlane ui_test_without_building tests:" --verbose --split-by=timings --timings-type=classname
       - store_test_results:
           path: fastlane/test_output/report.junit
 
@@ -87,6 +112,9 @@ workflows:
       - ui_test
       - build_for_ui_test
       - ui_test_parallel:
+          requires:
+            - build_for_ui_test
+      - ui_test_parallel_rerun_failed:
           requires:
             - build_for_ui_test
       - beta:
