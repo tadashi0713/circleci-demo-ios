@@ -91,7 +91,7 @@ jobs:
               | sed 's@/@.@g' \
               | sed 's/.swift//')
             FASTLANE_ARGS=$(echo $CLASSNAMES | sed -e 's/\./\//g' -e 's/ /,/g')
-            echo $FASTLANE_ARGS | circleci tests run --command="bundle exec fastlane ui_test_without_building tests:" --verbose --split-by=timings
+            echo $FASTLANE_ARGS | circleci tests run --command="bundle exec fastlane ui_test_without_building tests:" --verbose --split-by=timings --test-selector=classname
       - store_test_results:
           path: fastlane/test_output/report.junit
 
