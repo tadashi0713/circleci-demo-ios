@@ -72,7 +72,7 @@ jobs:
           path: fastlane/test_output/report.junit
 
   ui_test_parallel_rerun_failed:
-    parallelism: 4
+    parallelism: 10
     macos:
       xcode: 14.2.0
     resource_class: macos.m1.large.gen1
@@ -90,8 +90,8 @@ jobs:
             CLASSNAMES=$(circleci tests glob "CircleCIDemoUITests/*.swift" \
               | sed 's@/@.@g' \
               | sed 's/.swift//')
-            FASTLANE_ARGS=$(echo $CLASSNAMES | sed -e 's/\./\//g' -e 's/ /,/g')
-            echo $FASTLANE_ARGS | circleci tests run --command="bundle exec fastlane ui_test_without_building tests:" --verbose --split-by=timings --test-selector=classname
+            # FASTLANE_ARGS=$(echo $CLASSNAMES | sed -e 's/\./\//g' -e 's/ /,/g')
+            echo $CLASSNAMES | circleci tests run --command="bundle exec fastlane ui_test_without_building tests:" --verbose --split-by=timings --test-selector=classname
       - store_test_results:
           path: fastlane/test_output/report.junit
 
