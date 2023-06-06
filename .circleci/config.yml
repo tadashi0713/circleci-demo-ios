@@ -7,7 +7,7 @@ orbs:
 jobs:
   unit_test:
     macos:
-      xcode: 14.2.0
+      xcode: 14.3.1
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
@@ -20,7 +20,7 @@ jobs:
 
   ui_test:
     macos:
-      xcode: 14.2.0
+      xcode: 14.3.1
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
@@ -35,7 +35,7 @@ jobs:
 
   build_for_ui_test:
     macos:
-      xcode: 14.2.0
+      xcode: 14.3.1
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
@@ -49,7 +49,7 @@ jobs:
   ui_test_parallel:
     parallelism: 4
     macos:
-      xcode: 14.2.0
+      xcode: 14.3.1
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
@@ -73,7 +73,7 @@ jobs:
 
   beta:
     macos:
-      xcode: 14.2.0
+      xcode: 14.3.1
     resource_class: macos.m1.large.gen1
     steps:
       - checkout
