@@ -8,7 +8,7 @@ jobs:
   unit_test:
     macos:
       xcode: 14.3.1
-    resource_class: macos.m1.medium.gen1
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       # Ruby Orb(Install fastlane)
@@ -21,7 +21,7 @@ jobs:
   ui_test:
     macos:
       xcode: 14.3.1
-    resource_class: macos.m1.medium.gen1
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       # Preboot iOS Simulator
@@ -36,7 +36,7 @@ jobs:
   build_for_ui_test:
     macos:
       xcode: 14.3.1
-    resource_class: macos.m1.medium.gen1
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       - ruby/install-deps
@@ -50,7 +50,7 @@ jobs:
     parallelism: 4
     macos:
       xcode: 14.3.1
-    resource_class: macos.m1.medium.gen1
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       - macos/preboot-simulator:
@@ -74,11 +74,13 @@ jobs:
   beta:
     macos:
       xcode: 14.3.1
-    resource_class: macos.m1.medium.gen1
+    resource_class: macos.m1.large.gen1
     steps:
       - checkout
       - ruby/install-deps
       - run: bundle exec fastlane beta
+      - store_artifacts:
+          path: CircleCIDemo.ipa
 
 workflows:
   main:
