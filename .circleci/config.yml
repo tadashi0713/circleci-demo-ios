@@ -3,6 +3,7 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@2.1.0
   macos: circleci/macos@2.4.0
+  app-distribution: tadashi0713/app-distribution@0.1.0
 
 jobs:
   unit_test:
@@ -79,6 +80,8 @@ jobs:
       - checkout
       - ruby/install-deps
       - run: bundle exec fastlane beta
+      - app-distribution/upload_ios:
+          path: CircleCIDemo.ipa
 
 workflows:
   main:
