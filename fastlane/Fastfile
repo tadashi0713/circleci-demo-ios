@@ -58,7 +58,7 @@ platform :ios do
   end
 
   lane :beta do
-    match(type: "adhoc")
+    match(type: "adhoc", readonly: true)
     build_app(
       scheme: "CircleCIDemo",
       configuration: "Debug",
