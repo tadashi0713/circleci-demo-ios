@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var text = "Hello, world!"
+    @State var text = "Hello, CircleCI"
     
     var body: some View {
         Text(text)
