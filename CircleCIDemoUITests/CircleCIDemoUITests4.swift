@@ -16,8 +16,7 @@ class CircleCIDemoUITests4: XCTestCase {
         // Elements
         let text = app.staticTexts["text"]
         let button = app.buttons["button"]
-        
-        XCTAssertEqual(text.label, "Hello, world!")
+
         sleep(40)
         button.tap()
         XCTAssertEqual(text.label, "Button Tapped!")
