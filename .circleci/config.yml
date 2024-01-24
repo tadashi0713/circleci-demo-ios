@@ -83,8 +83,6 @@ jobs:
       - app-distribution/upload_ios:
           path: CircleCIDemo.ipa
       - app-distribution/comment_github_pr
-      - app-distribution/notify_slack:
-          channel: test
 
 workflows:
   main:
