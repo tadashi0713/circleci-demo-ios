@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@2.1.1
   macos: circleci/macos@2.4.1
-  app-distribution: tadashi0713/app-distribution@1.0.7
+  app-distribution: tadashi0713/app-distribution@1.2.0
 
 jobs:
   unit_test:
